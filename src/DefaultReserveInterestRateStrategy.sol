@@ -5,7 +5,7 @@ import {SafeMath} from "./open-zeppelin/contracts/SafeMath.sol";
 import {IReserveInterestRateStrategy} from "./interfaces/IReserveInterestRateStrategy.sol";
 import {WadRayMath} from "./libraries/math/WadRayMath.sol";
 import {PercentageMath} from "./libraries/math/PercentageMath.sol";
-import {ILendingPoolAddressesProvider} from "./interfaces/ILendingPoolAddressesProvider.sol";
+import {ILendingPoolAddressesProvider} from "@aave-address-book/AaveV2.sol";
 import {ILendingRateOracle} from "./interfaces/ILendingRateOracle.sol";
 import {IERC20} from "./open-zeppelin/contracts/IERC20.sol";
 
