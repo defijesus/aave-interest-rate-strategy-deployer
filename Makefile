@@ -20,6 +20,11 @@ verify-contract :; forge script script/DeployContract.s.sol:DeployContract --rpc
 clean    :; forge clean
 lint     :; npx prettier --write src/**/*.sol
 
+# Diff
+git-diff :
+	@mkdir -p diffs
+	@printf '%s\n%s\n%s\n' "\`\`\`diff" "$$(git diff --no-index --diff-algorithm=patience --ignore-space-at-eol ${before} ${after})" "\`\`\`" > diffs/${out}.md
+
 # Defaults to -v if no V=<{1,2,3,4,5} specified
 define compute_test_verbosity
 $(strip \
